@@ -1,6 +1,7 @@
 const realData = [
     {
         title: 'Booki',
+        link: 'https://github.com/tmxdrls/Site',
         picture:'./images/real/siteWeb_booki.webp',
         alt:'Photo du site codé en HTML et CSS : Booki',
         year:'2022',
@@ -13,6 +14,7 @@ const realData = [
       },
       {
         title: 'Sophie Bluel',
+        link: 'https://github.com/tmxdrls/Portfolio-architecte-sophie-bluel',
         picture:'./images/real/siteWeb_sophie.webp',
         alt:'Photo du site codé en JavaScript : Sophie Bluel',
         year:'2023',
@@ -28,6 +30,7 @@ const realData = [
       },
       {
         title: 'Menu Maker',
+        link: 'https://www.figma.com/file/Q6NEUPqwz1U3HFaCaVoF7N/Maquette-desktop---Menu-Maker-by-Qwenta?type=design&node-id=0-6&mode=design&t=9hiBCyEkjxTumdui-0',
         picture:'./images/real/siteWeb_menu.webp',
         alt:'Photo du projet planifié : Menu Maker',
         year:'2023',
@@ -43,6 +46,7 @@ const realData = [
       },
       {
           title: 'Nina Carducci',
+          link: 'https://tmxdrls.github.io/nina-carducci.github.io/',
           picture:'./images/real/siteWeb_nina.webp',
           alt:'Photo du projet SEO : Nina Carudcci',
           year:'2023',
@@ -59,6 +63,7 @@ const realData = [
         },
         {
           title: 'Kasa',
+          link: 'https://github.com/tmxdrls/Kasa',
           picture:'./images/real/siteWeb_kasa.webp',
           alt:'Photo du site codé en React.js : Kasa',
           year:'2023',
@@ -69,6 +74,7 @@ const realData = [
         },
         {
           title: 'Mes Vieux Grimoires',
+          link: 'https://github.com/tmxdrls/P7-Dev-Web-livres',
           picture:'./images/real/siteWeb_grimoire.webp',
           alt:'Photo du projet backend mes Vieux Grimoires',
           year:'2023',
@@ -112,6 +118,7 @@ realData.forEach(data => {
 
         modalContent.innerHTML = `
        
+        <i id="crossClose"class="fa-solid fa-xmark"></i>
             <aside id="modalImg">
                 <img src="${data.picture}" alt="${data.alt}">
             </aside>
@@ -125,8 +132,8 @@ realData.forEach(data => {
                         <p>${data.content}</p>
                     <h3>Technologies utilisées :</h3>
                         <div class="tagsContainer">${oneTag}</div>
+                    <a href="${data.link}">Lien vers le projet</a>
             </aside>
-            <i id="crossClose"class="fa-solid fa-xmark"></i>
         `;
     
         modalContainer.appendChild(modalContent);
